@@ -1,0 +1,140 @@
+/* -------------------------------------------------------------
+Project: Javascript website, CS 2513-W01, JS_Chapter10
+File name: buyer.css
+Last change: Oct. 13, 2013
+Author: Ameya Joshi
+
+Color codes:
+	body - background-color: #909090; color: #000;
+	h1 - background-color: #1826B0; color: #FFF;
+	navigation - background-color: #4C59D8; color: #FFF;
+	navigation visited - background-color:  background-color: #0C3;
+	website logo - background-color: RGB 0, 204, 51 (#0C3 equivalent)
+				   color: RGB 255, 255, 255 (#FFF equivalent)
+	footer - background-color: #FFF
+	form errors - input field background color: #FFF9CC (Lemon Chiffon)
+	form errors - error messages: red
+
+Images:
+	website logo - url(images/JS_logo.png) no-repeat
+	
+Shadows:
+	container - -webkit-box-shadow: 5px 5px 5px #606060
+				-moz-box-shadow: 5px 5px 5px #606060
+				box-shadow: 5px 5px 5px #606060
+
+Borders:
+	navigation - border: 3px outset #CCCCCC
+	navigation hover/visited - border: 3px inset #666666
+
+Typography:
+	h1 - font-size: 40px; text-align - center
+	body - font-family: Arial, Helvetica, sans-serif
+	footer - font-size: .80em;
+			 font-style: italic;
+			 text-align: center;
+	navigation - text-align: left
+	
+----------------------------------------------------------------*/
+
+/*-------------------- Header and Navigation ----------------------*/
+h1 { background: #1826B0 url(images/JS_logo.png) no-repeat;
+	text-align: center;
+	font-size: 40px;
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;	}
+
+#header ul { background-color: #1826B0;
+		   margin: auto;
+		   padding-left: 5px;
+		   padding-right: 20px;
+		   padding-top: 15px;
+		   padding-bottom: 20px;
+		   width: auto; }
+	
+#header li { text-align: left;
+		   padding-left: 6px;
+		   display: inline;
+		   font-weight: bold; }
+
+#header a { color: #FFF;
+		   text-decoration: none;
+		   border: 3px outset #CCCCCC;
+		   background-color: #4C59D8;
+		   padding-top: 2px;
+		   padding-bottom: 2px;
+		   padding-left: 7px;
+		   padding-right: 7px; }
+
+#header a:hover { border: 3px inset #666666; }
+
+#header a:visited { border: 3px inset #666666;
+		   background-color: #0C3; }
+
+/*------------------------- Content Areas -------------------------*/
+body { background-color: #909090;
+	  color: #000;
+	  font-family: Arial, Helvetica, sans-serif; }
+
+#content { background-color: #FFFFFF;
+		  padding-left: 20px;
+		  padding-right: 20px;
+		  padding-top: 10px;
+		  padding-bottom: 10px;}
+
+#container { min-width: 960px;
+		    -webkit-box-shadow: 5px 5px 5px #606060;
+		    -moz-box-shadow: 5px 5px 5px #606060;
+		    box-shadow: 5px 5px 5px #606060;
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 80%; }
+			
+/*---------------------------- Table ----------------------------*/
+table { padding: 10px;
+	  margin-left: auto;
+			 margin-right: auto;}
+
+.alignRight{ text-align:right; }
+
+.alignCenter{ text-align:center; }
+
+.hideerror { color:red;
+			font-weight: bold;
+		    visibility:hidden;
+		    font-size:.75em;}
+			
+.erroralert { color:red;
+			 visibility: hidden;
+			 font-weight: bold; }
+
+/*---------------------------- Footer -----------------------------*/
+#footer { font-size: .80em;
+		 font-style: italic;
+		 text-align: center;
+		 background-color: #FFF;
+		 padding: 10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Add additional meta tags -->
+	<title>Buyer Information</title>
+	<meta name="author" content="Ameya Joshi" />
+	<meta name="description" content="This is the form page for REGEX" />
+	<meta name="keywords" content="forms, javascript, xhtml, Client-Side Programming, regex, REGEX" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="en-us" />
+  
+	 <!-- This links to the external buyer.js file -->
+	<script type="text/javascript" src="buyer.js"></script>
+	
+	<!-- This links to the external buyer.css file -->
+	<link rel="stylesheet" type="text/css" href="buyer.css" />
+
+ <!-- E_ indicates an error message. Example: E_FirstName is the error message if the first name is not correct.-->
+</head>
+
+<body onload="moveCursor()">  
+	<div id="container">
+	  <div id="header"> <!-- Div for header -->
+		<script type="text/javascript">displayHeader();</script>
+	  </div> <!-- End of div for header -->
+		
+		<div id="content"> <!-- Div for content -->
+			<h2>Please fill out the following form</h2>
+				
+			<form id="frmBuyer" method="get" action="FormProcessor.html"
+				onsubmit="return validate();" onreset="location.reload();">
+			  <div class="indentLeft">
+				<table>
+				   <tr>
+					  <td colspan="3"><label id="E_Alert"  class="erroralert" >Please correct the errors before proceeding.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">First Name</div></td>
+					  <td><input name="FirstName"  id="FirstName" value="" type="text" tabindex="0" /></td>
+					  <td><label id="E_FirstName" class="hideerror" >* Required field.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Last Name</div></td>
+					  <td><input name="LastName" id="LastName" value="" type="text" tabindex="1" /></td>
+					  <td><label id="E_LastName" class="hideerror">* Required field.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Phone 111 555 1111</div></td>
+					  <td><input name="PhoneA" id="PhoneA" type="text" onkeyup="movePhoneCursor()" maxlength="3" size="3" value="" tabindex="2" /> 
+						  <input name="PhoneB" id="PhoneB" type="text" onkeyup="movePhoneCursor()" maxlength="3" size="3" value="" tabindex="3"  /> 
+						  <input name="PhoneC" id="PhoneC" type="text"  maxlength="4" size="4" value="" tabindex="4" /></td>
+					  <td><label id="E_Phone" class="hideerror">* Required format 111 222 3333</label></td>
+				   </tr>
+				  <tr>
+					  <td><div class="alignRight">Cell Phone 111 555 2222</div></td>
+					  <td><input name="Cell_PhoneA" id="Cell_PhoneA" type="text" onkeyup="moveCellCursor()" maxlength="3" size="3" tabindex="5"  />
+						  <input name="Cell_PhoneB" type="text" onkeyup="moveCellCursor()" maxlength="3" size="3" tabindex="6" /> 
+						  <input name="Cell_PhoneC" type="text"  maxlength="4" size="4" tabindex="7" /></td>
+					  <td><span class="optional">Optional</span>
+						  <label id="E_Cell" class="hideerror">* Required format 111 222 3333 </label></td>
+				   </tr> 
+				   <tr>
+					  <td><div class="alignRight">Email</div></td>
+					  <td><input name="Email" id="Email" type="text" tabindex="8" /></td>
+					  <td><label id="E_Email" class="hideerror">* Incorrect format or emails do not match.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Confirm Email</div></td>
+					  <td><input name="ConfirmEmail" id="ConfirmEmail" type="text" tabindex="9"  /></td>
+					  <td><label id="E_ConfirmEmail" class="hideerror">* Incorrect format or emails do not match.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Address 1</div></td>
+					  <td><input name="Address1" id="Address1" type="text" value="" tabindex="10" /></td>
+					  <td><label id="E_Address1" class="hideerror">* Required field.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Address 2</div></td>
+					  <td><input name="Address2" id="Address2" type="text" tabindex="11" /></td>
+					  <td><span class="optional">Optional</span>
+						  <label id="E_Address2" class="hideerror">* Valid address required.</label></td>
+				   </tr>
+				   <tr>
+					 <td><div class="alignRight">City</div></td>
+					  <td><input name="City" id="City" type="text" value="" tabindex="12" /></td>
+					  <td><label id="E_City" class="hideerror">* Required field.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">State</div></td>
+					  <td><select name="State" id="State" tabindex="13" >
+						 <option value="" selected="selected">Select a State</option>
+						 <option value="AL">Alabama</option>
+						 <option value="AK">Alaska</option>
+						 <option value="AZ">Arizona</option>
+						 <option value="AR">Arkansas</option>
+						 <option value="CA">California</option>
+						 <option value="CO">Colorado</option>
+						 <option value="CT">Connecticut</option>
+						 <option value="DE">Delaware</option>
+						 <option value="DC">DC</option>
+						 <option value="FL">Florida</option>
+						 <option value="GA">Georgia</option>
+						 <option value="HI">Hawaii</option>
+						 <option value="ID">Idaho</option>
+						 <option value="IL">Illinois</option>
+						 <option value="IN">Indiana</option>
+						 <option value="IA">Iowa</option>
+						 <option value="KS">Kansas</option>
+						 <option value="KY">Kentucky</option>
+						 <option value="LA">Louisiana</option>
+						 <option value="ME">Maine</option>
+						 <option value="MD">Maryland</option>
+						 <option value="MA">Massachusetts</option>
+						 <option value="MI">Michigan</option>
+						 <option value="MN">Minnesota</option>
+						 <option value="MS">Mississippi</option>
+						 <option value="MO">Missouri</option>
+						 <option value="MT">Montana</option>
+						 <option value="NE">Nebraska</option>
+						 <option value="NV">Nevada</option>
+						 <option value="NH">New Hampshire</option>
+						 <option value="NJ">New Jersey</option>
+						 <option value="NM">New Mexico</option>
+						 <option value="NY">New York</option>
+						 <option value="NC">North Carolina</option>
+						 <option value="ND">North Dakota</option>
+						 <option value="OH">Ohio</option>
+						 <option value="OK">Oklahoma</option>
+						 <option value="OR">Oregon</option>
+						 <option value="PA">Pennsylvania</option>
+						 <option value="RI">Rhode Island</option>
+						 <option value="SC">South Carolina</option>
+						 <option value="SD">South Dakota</option>
+						 <option value="TN">Tennessee</option>
+						 <option value="TX">Texas</option>
+						 <option value="UT">Utah</option>
+						 <option value="VT">Vermont</option>
+						 <option value="VA">Virginia</option>
+						 <option value="WA">Washington</option>
+						 <option value="WV">West Virginia</option>
+						 <option value="WI">Wisconsin</option>
+						 <option value="WY">Wyoming</option>
+					  </select></td>
+					  <td><label id="E_State" class="hideerror">* A state must be selected.</label></td>
+				   </tr>
+				   <tr>
+					  <td><div class="alignRight">Zip</div></td>
+					  <td><input name="Zip" id="Zip" type="text" value="" tabindex="14" /></td>
+					  <td><label id="E_Zip" class="hideerror">* Required format 12345 or 12345-1234.</label></td>
+				   </tr>
+				   <tr>
+					  <td></td>
+					  <td><div class="alignRight">
+						 <input type="submit" name="btnSubmit" id="btnSubmit" value="Check Out" tabindex="15"  /> &nbsp;&nbsp;
+						 <input type="reset" name="btnReset" id="btnReset" tabindex="16"  />
+					  </div></td>
+					  </tr>
+				</table> 
+			  </div> <!-- End of div for table -->
+			</form>
+		</div> <!-- End of div for content -->
+		
+		<div id="footer"> <!-- Div for footer -->
+		  
+		  <script type="text/javascript">displayFooter();</script>
+		  
+		</div> <!-- End of div for footer -->
+	</div> <!-- End of container div -->
+
+</body>
+</html>

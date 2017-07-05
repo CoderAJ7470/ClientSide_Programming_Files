@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head> <!-- Beginning of head section -->
+	<title>CSP 2513 Forms: Ameya Joshi</title>
+	<meta name="author" content="Ameya Joshi" />
+	<meta name="description" content="This is the form page where you can select from a couple of photos" />
+	<meta name="keywords" content="forms, javascript, xhtml, Client-Side Programming, CSS, photos" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	
+	<script type="text/javascript" src="csp.js"> <!-- This links to the external JS file -->
+	</script>
+	
+	<!-- This links to the external CSS file -->
+	<link rel="stylesheet" href="csp.css" type="text/css" media="screen" />
+	
+</head> <!-- End of head section -->
+
+<body>
+	<div id="container"> <!-- Div for all webpage content -->
+		<div id="header"> <!-- Div for header -->
+		  <script type="text/javascript">displayHeader();</script>
+		</div> <!-- End of div for header -->
+		
+		<div id="content"> <!-- Div for content -->
+		  <h2>Forms</h2>
+		  <h3>Please choose one of the images below</h3>
+		  <div>
+			<p><img src="images/oklahoma_sunrise.jpg" width="458" height="343" alt="Oklahoma sunrise" /></p>
+			<p id="caption1">Oklahoma Sunrise</p>
+			<p><img src="images/QF747_At_DFW.jpg" width="458" height="343" alt="Qantas Boeing 747-400" /></p>
+			<p id="caption2">Qantas Airways 747-400</p><br />
+		  </div>
+		  <form id="photoForms" method="get" action="FormProcessor.html"
+				onsubmit="return validateForm();">
+			<fieldset>
+				<legend><strong>Customer Information</strong></legend>
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" tabindex="1" accesskey="N" />
+				<label class="fieldError" id="errorName">* Required Field</label>
+				<br />
+				<label for="email">E-mail:</label>
+				<input type="text" name="email" id="email" tabindex="2" accesskey="M" />
+				<label class="fieldError" id="errorEmail">* Required Field</label>
+			</fieldset>
+			<p></p>
+			<fieldset>
+				<legend><strong>Please select a photograph</strong></legend>
+				<label class="inputError" id="errorSelection">* One selection required</label>
+				<input type="radio" name="select" id="selectA" tabindex="5" accesskey="A"
+					value="images/oklahoma_sunrise.jpg" />Oklahoma Sunrise<br />
+				<input type="radio" name="select" id="selectB" tabindex="6" accesskey="B"
+					value="images/QF747_At_DFW.jpg" />Qantas 747-400<br />
+			</fieldset>
+			<p></p>
+			<fieldset>
+				<legend><strong>Please select a size</strong></legend>
+				<label class="inputError" id="errorChoice">* One selection required</label>
+				<input type="radio" name="choice" id="choiceOne" tabindex="5" accesskey="C"
+					value="4-Wallets ($10)" />4-Wallets ($10)<br />
+				<input type="radio" name="choice" id="choiceTwo" tabindex="6" accesskey="D"
+					value="2-4x6 ($10)" />2-4x6 ($10)<br />
+				<input type="radio" name="choice" id="choiceThree" tabindex="6" accesskey="E"
+					value="5x7 ($10)" />5x7 ($10)<br />
+				<input type="radio" name="choice" id="choiceFour" tabindex="8" accesskey="F"
+					value="8x10 ($20)" />8x10 ($20)<br />
+				<input type="radio" name="choice" id="choiceFive" tabindex="9" accesskey="G"
+					value="11x14 ($30)" />11x14 ($30)<br />
+			</fieldset>
+			<p></p>
+			<fieldset>
+				<legend><strong>How many copies you would like to order?</strong></legend>
+				<label for="copies">Quantity (Limit 25):</label>
+				<input type="text" name="copies" id="copies" tabindex="10" accesskey="H" />
+				<label class="inputError" id="errorCopies">* Must be 1-25 (inclusive)</label>
+				<br /><br />
+				<input type="submit" id="submit" value="Place Order" tabindex="11" accesskey="S"/>
+			</fieldset>
+			<p></p>
+		  </form>
+		</div> <!-- End of div for content -->
+		
+		<div id="footer"> <!-- Div for footer -->
+		  
+		  <script type="text/javascript">displayFooter();</script>
+		  
+		</div> <!-- End of div for footer -->
+	</div> <!-- End of div for all webpage content -->
+</body> <!-- End of webpage body -->
+</html> <!-- Ending HTML tag -->
+
+
+
+
+
+
+
+
+
+
+

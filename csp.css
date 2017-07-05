@@ -1,0 +1,458 @@
+/* -------------------------------------------------------------
+Project: Javascript website, CS 2513-W01, JS_Chapter12
+File name: CSP.css
+Last change: Nov. 24, 2013
+
+Color codes:
+	body - background-color: #909090; color: #000;
+	h1 - background-color: #1826B0; color: #FFF;
+	navigation - background-color: #4C59D8; color: #FFF;
+	navigation visited - background-color:  background-color: #0C3;
+	website logo - background-color: RGB 0, 204, 51 (#0C3 equivalent)
+				   color: RGB 255, 255, 255 (#FFF equivalent)
+	footer - background-color: #FFF
+	Calculator form - background-color: #B8B8B8
+	Calculator form all buttons - color: #FFF
+	Calculator form number buttons - background-color: #000
+	Calculator form operator buttons - background-color: #888
+	Calculator form display - background-color: #8C8C5A
+	Prime numbers form - background-color: #FFF
+	Prime numbers table - background-color: #FFF
+	Ads form - background-color: #FFF
+	Photo order form - background-color: #FFF
+	Photo order form labels - background-color: #FFF
+	Objects order form - background-color: #FFF
+	Objects order form labels - background-color: #FFF
+	Shop (all tables) - background-color: #FFF
+	Promo page (modal window) - background-color: #FFF
+	Promo page (modal window notice) - background color: #4682B4; color: #FFF
+	AJAX page forms - background-color: #FFF
+	AJAX page "Current Local Weather" - color: #4169E1
+
+Images:
+	website logo - url(images/JS_logo.png) no-repeat
+	Ads page - images/cvb1.gif, images/cvb2.gif images/cvb3.gif
+	photo order form page - images/oklahoma_sunrise.jpg, images/QF747_At_DFW.jpg
+	objects order form page - images/oklahoma_sunrise.jpg, images/QF747_At_DFW.jpg
+							images/sunrise_small.jpg, images/qantas_small.jpg
+	
+Shadows:
+	container - -webkit-box-shadow: 5px 5px 5px #606060
+				-moz-box-shadow: 5px 5px 5px #606060
+				box-shadow: 5px 5px 5px #606060
+
+Borders:
+	navigation - border: 3px outset #CCCCCC
+	navigation hover/visited - border: 3px inset #666666
+	Calculator form - border: 10px outset #000
+	Prime numbers form - border: none
+	Prime numbers table - border (<table>): 3px solid black
+	Prime numbers table - border (<td>): 1px solid black
+	Ads form - border: none
+	Photo order form - border: none
+	Objects order form - border: none
+	Shop (products and shopping cart tables) - border: 1px solid #3399CC
+	Shop output table with dynamic mesasges - border: none
+	Shop text boxes (amounts) - border: 1px solid #000
+	AJAX page forms - border: none
+
+Typography:
+	h1 - font-size: 40px; text-align - center
+	body - font-family: Arial, Helvetica, sans-serif
+	footer - font-size: .80em;
+			 font-style: italic;
+			 text-align: center;
+	navigation - text-align: left
+	calculator form all buttons - text-align: center
+	calculator form display - text-align: right
+	prime numbers table - text-align: center (<td>)
+						  font-size: 30px
+						  width: 80%
+	Shop (all tables <td>) - font-size: 20px
+	Shop (all table <caption>) - font-size: 25px
+	AJAX page "Current Local Weather" - font-size: 50px
+	
+----------------------------------------------------------------*/
+
+/*-------------------- Header and Navigation ----------------------*/
+h1 { background: #1826B0 url(images/JS_logo.png) no-repeat;
+	text-align: center;
+	font-size: 40px;
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;	}
+
+#header ul { background-color: #1826B0;
+		   margin: auto;
+		   padding-left: 5px;
+		   padding-right: 20px;
+		   padding-top: 15px;
+		   padding-bottom: 20px;
+		   width: auto; }
+	
+#header li { text-align: left;
+		   padding-left: 6px;
+		   display: inline;
+		   font-weight: bold; }
+
+#header a { color: #FFF;
+		   text-decoration: none;
+		   border: 3px outset #CCCCCC;
+		   background-color: #4C59D8;
+		   padding-top: 2px;
+		   padding-bottom: 2px;
+		   padding-left: 7px;
+		   padding-right: 7px; }
+
+#header a:hover { border: 3px inset #666666; }
+
+#header a:visited { border: 3px inset #666666;
+		   background-color: #0C3; }
+
+/*------------------------- Content Areas -------------------------*/
+body { background-color: #909090;
+	  color: #000;
+	  font-family: Arial, Helvetica, sans-serif;
+}
+
+#content { background-color: #FFFFFF;
+		  padding-left: 20px;
+		  padding-right: 20px;
+		  padding-top: 10px;
+		  padding-bottom: 10px;}
+
+#container { min-width: 960px;
+		    -webkit-box-shadow: 5px 5px 5px #606060;
+		    -moz-box-shadow: 5px 5px 5px #606060;
+		    box-shadow: 5px 5px 5px #606060;
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 80%; }
+
+/*---------------------- Form: Calculator ------------------------*/
+form { border: 10px outset #000;
+	 width: 333px;
+	 height: 380px;
+	 margin-left: auto;
+	 margin-right: auto;
+	 background-color: #B8B8B8; }
+
+#display { width: 313px;
+		  height: 50px;
+		  background-color: #8C8C5A;
+		  text-align: right;
+		  font-size: 40px;
+		  margin-left: 7px; }
+		  
+#clear { margin: 10px;
+		text-align: center;
+		background-color: #FF6600;
+		color: #FFF;
+		font-size: 38px;
+		width: 65px;
+		height: 44px; }
+	
+.buttons { margin: 7px 3px 7px 10px;
+		  text-align: center;
+		  font-size: 38px;
+		  background-color: #000;
+		  color: #FFF;
+		  width: 65px;
+		  height: 44px; }
+		  
+.operators { margin: 7px 3px 7px 10px;
+		  text-align: center;
+		  font-size: 38px;
+		  background-color: #888;
+		  color: #FFF;
+		  width: 65px;
+		  height: 44px; }
+
+/*--------------------- Form: Prime Numbers -----------------------*/
+#primeNumbers { border: none;
+			   background-color: #FFF;
+			   height: auto;
+		       margin-left: auto;
+		       margin-right: auto; }
+
+/*--------------------- Form: Advertisement -----------------------*/
+#ads { border: none;
+	  background-color: #FFF;
+	  height: auto;
+	  width: auto;
+	  margin-left: 0px;}
+	  
+#count { background-color: transparent;
+		  width: 20px;
+		  border: none; }
+		  
+#realtors h1{ background: #FFF;
+		     color: #000;
+			 text-align: left;}
+		  
+/*---------------------- Form: Photo Order -------------------------*/
+#photoForms { border: none;
+		    background-color: #FFF;
+		    height: auto;
+			margin-right: auto; }
+			
+#photoForms label { display: block;
+				padding-top: 5px;
+				padding-bottom: 5px;}
+				
+#photoForms fieldset { width: 390px; }
+				
+#photoFinish h1 { background: #FFF;
+				color: #000;
+				text-align: left;}
+			 
+#selectA { margin-top: 5px;
+		  margin-bottom: 5px; }
+		  
+#selectB { margin-top: 5px;
+		  margin-bottom: 5px; }
+			 
+#choiceOne { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceTwo { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceThree { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceFour { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceFive { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#caption1 { margin-left: 160px; }
+
+#caption2 { margin-left: 145px; }
+
+.inputError { visibility: hidden;
+			 float: right;
+			 margin-right: 48px;
+			 color: #F00;
+			 font-weight: bold;}
+			 
+.fieldError { visibility: hidden;
+			 float: right;
+			 margin-right: 110px;
+			 color: #F00;
+			 font-weight: bold; }
+			 
+/*---------------------- Form: Objects -------------------------*/
+#gallery ul { width: 300px;
+			list-style-type: none; }
+			
+#gallery li { padding: 10px;
+			float: left;}
+			
+#gallery img { border-style: none;
+			 float: none;}
+
+#gallery a { text-decoration: none;
+			float: left;
+			color: #333333;
+			font-style: italic; }
+
+#gallery span { display: none; }
+
+#gallery a:hover span { display: inline;
+					  position: absolute;
+					  top: 290px;
+					  left: 400px; 
+					  text-align: center; }
+
+#photoForm { border: none;
+		    background-color: #FFF;
+		    height: auto;
+		    width: auto;
+		    margin-left: 250px;
+			margin-top: 400px; }
+			
+#photoForm label { display: block;
+				padding-top: 5px;
+				padding-bottom: 5px;}
+				
+#photoForm fieldset { width: 390px; }
+				
+#photoFinish h1 { background: #FFF;
+				color: #000;
+				text-align: left;}
+			 
+#selectA { margin-top: 5px;
+		  margin-bottom: 5px; }
+		  
+#selectB { margin-top: 5px;
+		  margin-bottom: 5px; }
+			 
+#choiceOne { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceTwo { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceThree { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceFour { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#choiceFive { margin-top: 5px;
+			margin-bottom: 5px; }
+			
+#caption1 { margin-left: 160px; }
+
+#caption2 { margin-left: 145px; }
+
+#objectOutput { background-color: #FFF;
+				padding: 10px; }
+
+#objectOutput img { display: block; }
+
+.inputError { visibility: hidden;
+			 float: right;
+			 margin-right: 48px;
+			 color: #F00;
+			 font-weight: bold;}
+			 
+.fieldError { visibility: hidden;
+			 float: right;
+			 margin-right: 110px;
+			 color: #F00;
+			 font-weight: bold; }
+
+/*--------------------- Table: Prime Numbers -----------------------*/
+table { margin: auto;
+	  border: 3px solid black;
+	  width: 80%;
+	  border-spacing: 0px;
+	  background-color: #FFF;}
+	  
+td { padding: 5px;
+	border: 1px solid black;
+	text-align: center;
+	font-size: 30px;}
+	 
+/*---------------------------- Footer -----------------------------*/
+#footer { font-size: .80em;
+		 font-style: italic;
+		 text-align: center;
+		 background-color: #FFF;
+		 padding: 10px; }
+		 
+/*--------------------- Table: Shop & Promo -----------------------*/
+#productsTable  { margin: auto;
+				border: 1px solid #3399CC;
+				width: 550px;
+				height: 370px;
+				border-spacing: 0px;
+				background-color: #FFF; }
+	  
+#productsTable td { border: 1px solid #3399CC;
+				  margin: 3px;
+				  text-align: left;
+				  font-size: 20px; }
+				  
+#shoppingCart  { margin: auto;
+				border: 1px solid #3399CC;
+				width: 55%;
+				border-spacing: 0px;
+				background-color: #FFF; }
+				
+#shoppingCart td { border: 1px solid #3399CC;
+				margin: 3px;
+				text-align: center;
+				font-size: 20px; }
+				  
+#paymentInfo  { margin-right: 180px;
+			  border: none;
+			  width: 650px;
+			  border-spacing: 0px;
+			  background-color: #FFF; }
+				
+#paymentInfo td { border: none;
+				text-align: right;
+				font-size: 20px; }
+				
+#credits { margin-left: 230px; }
+				  
+.addAdjust { padding-top: 1px; }
+
+.output { border-style: solid;
+		 border: 1px solid #000;
+		 width: 100px;
+		 padding-left: 3px;
+		 font-weight: bold; }
+				  
+.title { font-weight: bold;
+		font-size: 25px; }
+		
+.titleCells { width: 550px; }
+
+/*-------------------------- Promo Page ---------------------------*/
+#mask { position: fixed;
+	   width: 100%;
+	   height: 100%;
+	   z-index: 1;
+	    opacity: 0.9;
+	   -moz-opacity: 0.9;
+	   background-color: #C0C0C0;
+	   left: 0px;	   
+	   top: 0px; }
+
+#modal { z-index: 2;
+		position: relative;
+		background-color: #FFF;
+		font-size: 40px;
+		text-align: center;
+		width: 800px;
+		height: 500px;
+		top: 200px;
+		border: 1px solid #000; }
+		
+#modal p { text-align: center;
+		  color: #FFF;
+		  background-color: #4682B4; }
+
+#modal a { font-size: 20px;
+		  padding-right: 10px;
+		  float: right; }
+
+/*--------------------------- AJAX page ---------------------------*/
+#weatherForm { border: none;
+			  height: auto;
+		      background-color: #FFF; }
+
+#weather { font-size: 50px;
+		  color: #4169E1;
+		  text-align: center; }
+		  
+#weatherPara { text-align: center; }
+
+#currentTime { text-align: center; }
+
+#curDate { color: gray; }
+
+.center { text-align: center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
